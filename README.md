@@ -5,11 +5,13 @@ Data extraction pipeline to add geographic features from [OpenStreetMap](https:/
 # Requirements
 
 - Hourly aggregate csv file from Uber movement download page. This file contains the aggregated data of the trips that start and end
-within the same catastral zone of a city. For downloads, users must register for free beforhand.
-- Catastral distribution of the city in hand, also downloadable from Uber movement. This file is a json file with the names of the zones of the cadastral zones in the
+within the same cadastral zone of a city. For downloads, users must register for free beforehand.
+- Cadastral distribution of the city in hand, also downloadable from Uber movement. This file is a json file with the names of the zones of the cadastral zones in the
 hourly aggregate csv and the coordinates of the polygon that delimits the zones.
-- Distance between the cadastral zones can be queried using OSRM, an routing engine based on OpenStreetMap (OSM) maps. The [OSRM docker image](https://hub.docker.com/r/osrm/osrm-backend/) is probably the simplest way to get the routing engine up and acepting requests.
+- Distance between the cadastral zones can be queried using OSRM, an routing engine based on OpenStreetMap (OSM) maps. The [OSRM docker image](https://hub.docker.com/r/osrm/osrm-backend/) is probably the simplest way to get the routing engine up and accepting requests.
 -  OSM extracts for the places to be queried. [Geofabrik](http://download.geofabrik.de/europe/spain/madrid.html) offers different map segmentation options for the whole planet.  
+
+Both the hourly aggregate csv and the cadastral information json are expected in a folder named data/ in the root folder.
 
 In addition, run inside the dev environment:
 
